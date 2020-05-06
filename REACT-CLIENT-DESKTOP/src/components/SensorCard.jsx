@@ -47,7 +47,7 @@ export default class SensorCards extends Component {
 
   componentDidMount() {
     this.sensorData();
-    this.timerId = setInterval(() => this.sensorData(), 3000);
+    this.timerId = setInterval(() => this.sensorData(), 30000);
   }
   componentWillUnmount() {
     clearInterval(this.timerId);

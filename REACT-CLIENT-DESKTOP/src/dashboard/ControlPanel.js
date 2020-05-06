@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button, Grid, Typography } from '@material-ui/core';
 import PlayCircleOutlineIcon from '@material-ui/icons/PlayCircleOutline'
 import PauseIcon from '@material-ui/icons/Pause';
@@ -7,9 +7,16 @@ import alertify from "alertifyjs"
 
 const Controls = () => {
 
-    const [rmiServerStatus, setRmiServerStatus] = useState(sessionStorage.getItem("rmi_server") | false)
-    const [rmiClientsStatus, setRmiClientsStatus] = useState(sessionStorage.getItem("rmi_clients") | false)
+    const [rmiServerStatus, setRmiServerStatus] = useState(false)
+    const [rmiClientsStatus, setRmiClientsStatus] = useState(false)
 
+    useEffect(() => {
+        console.log(sessionStorage.getItem("rmi_server"));
+        console.log(sessionStorage.getItem("rmi_clients"));
+
+        setRmiServerStatus(sessionStorage.getItem("rmi_server"))
+        setRmiClientsStatus(sessionStorage.getItem("rmi_clients"))
+    }, [])
 
     const startRMIserver = () => {
         baseAxios.post("init/start_rmi_server",
@@ -77,7 +84,7 @@ const Controls = () => {
         ).then(response => {
             const data = response.data
             if (data.message === 'ClientS Shutdown OK') {
-                setRmiServerStatus(false)
+                setRmiClientsStatus(false)
                 sessionStorage.setItem("rmi_clients", false)
                 console.log("Sensor Monitoring Server Shutdown Successfull")
                 alertify.success("Sensors Stopped")

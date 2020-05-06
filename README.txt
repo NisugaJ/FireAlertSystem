@@ -1,5 +1,4 @@
 
-
 //Members
 Jayawardana N.S
 IT18117110
@@ -23,9 +22,10 @@ it18134490@my.sliit.lk
 
 
 //Video Link
-
-
+https://youtu.be/Xz72AwnAFRo
+ 
 
 //Github Project Link
+https://github.com/NisugaJ/FireAlertSystem
 
 

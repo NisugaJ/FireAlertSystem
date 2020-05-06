@@ -1,0 +1,29 @@
+1. First make clone from https://github.com/NisugaJ/FireAlertSystem .
+2. Start CMD and go to \apache-tomcat-9.0.34\bin and run following command
+    
+    startup
+
+    //Note: You must have JAVA_HOME env variable configured ( Follow the instructions in RUNNING.txt )
+    // The .WAR file of the RESR API  is already added to the webapps folder in this server
+
+3. After starting the tomcat server, goto REACT-CLIET-DESKTOP Folder and run by executing 'npm start' . Like this you can start REACT-CLIENT-WEB also  
+4. Now goto Desktop App ( Admin App )
+5. In Dashboard, click play button near `Sensor Monitor (RMI Server)`. This will start RMI Sensor Monitoring Service.
+6. In Dashboard ,click play button near `Sensors`. This will start sensor clients in the system background ( foreach sensor record in the DB available )
+7. Now sensors are sending new data to REST API.
+
+8. Watch this video now. It will help you on how to work with the admin app.
+   Try follwing things.
+
+	Add a new sensor
+	Update a sensor
+	Delete a sensor
+	Update status of a alert as 'FIXED'
+	Delete an alert
+	Start/Stop RMI Server
+	Turn on/off dummy RMI sensor clients
+	
+	
+
+
+

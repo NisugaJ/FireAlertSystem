@@ -212,7 +212,7 @@ public class AlertService {
 	private Boolean sendAlertEmail(Alert alert) {
 		
 		final String fromEmail = "nisujdev@gmail.com"; //requires valid gmail id
-		final String password = "r0c4we11@dev"; // correct password for gmail id
+		final String password = ""; // correct password for gmail id
 		final String toEmail = "nisuga.rockwell@gmail.com"; // can be any email id 
 		
 		System.out.println("SSLEmail Start");

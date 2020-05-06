@@ -78,6 +78,8 @@ const AdminLogin = () => {
                 <Typography component="h1" variant="h6">
                     Log In
         </Typography>
+                Default username : admin<br />
+                Default password :admin123
                 <form className={classes.form} onSubmit={LoginUser}>
                     <MSG style={invalidLogin ? { opacity: 1, height: "auto" } : {}}>
                         Invalid Details. Please enter valid credentials
