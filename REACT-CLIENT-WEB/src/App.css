@@ -1,0 +1,61 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.App {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 20px 40px;
+  margin: 10px;
+}
+
+.card {
+  background-color: brown;
+  padding: 20px;
+  border-radius: 15px;
+  color: white;
+}
+
+table {
+  width: 100%;
+}
+
+.card table tr {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card table tr td {
+  padding: .5rem 1rem;
+}
+
+
+@media(max-width:1500px) {
+  .App {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media(max-width:1200px) {
+  .App {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media(max-width:900px) {
+  .App {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width:600px) {
+  .App {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
